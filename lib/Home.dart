@@ -5,6 +5,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false, // no difference when value is true (default)
       appBar: AppBar(
         title: Text("Stripe payment example"),
       ),
