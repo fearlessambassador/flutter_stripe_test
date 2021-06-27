@@ -4,15 +4,15 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "a81a48356e555c1224be837153b86032",
-"index.html": "dad47fcf37bdd142cfbaeb3136191781",
-"/": "dad47fcf37bdd142cfbaeb3136191781",
-"main.dart.js": "48362103d8ed2c8e7cdfd44c44772f96",
+"index.html": "ff786166bcf734b3e9846a19c96d2fae",
+"/": "ff786166bcf734b3e9846a19c96d2fae",
+"main.dart.js": "baa455b36c66fcfdf9297e49bb24a191",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "99e17707c0b4bcb4a2cb62b3d0f4515f",
 "assets/AssetManifest.json": "99914b932bd37a50b983c5e7c90ae93b",
-"assets/NOTICES": "41bc6beebe39e9d5bafc6f7baec64764",
+"assets/NOTICES": "6acd54c9c9d1887637a9b6df9ddbcd46",
 "assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "src/stripe.js": "6cf866fd99077da5970f3cc862867c23"
