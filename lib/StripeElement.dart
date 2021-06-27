@@ -2,13 +2,10 @@
 library stripe_payment_html_view_lib; // Cannot avoid the library annotation
 
 import 'dart:html';
-import 'dart:js_util';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:js/js.dart';
 import 'dart:js' as js;
-
-import 'package:uuid/uuid.dart';
 
 @JS()
 external setUpPaymentIntent(language);
@@ -23,19 +20,12 @@ class StripePaymentHtmlView extends StatefulWidget {
 }
 
 class _StripePaymentHtmlViewState extends State<StripePaymentHtmlView> {
-  final GlobalKey _paymentKey = GlobalKey();
   late String paymentLabel;
-
-  String generateId() {
-    Uuid uuid = Uuid();
-    return uuid.v4();
-  }
 
   @override
   void initState() {
 
-    String id = generateId();
-    paymentLabel = "stripe-payment-" + id;
+    paymentLabel = "stripe-payment-view";
 
     BodyElement body = BodyElement();
 
@@ -70,7 +60,6 @@ class _StripePaymentHtmlViewState extends State<StripePaymentHtmlView> {
           height: 100,
           child: Center(
             child: HtmlElementView(
-              key: _paymentKey,
               viewType: paymentLabel,
             ),
           ),
