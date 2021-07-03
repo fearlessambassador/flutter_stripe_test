@@ -72,7 +72,6 @@ class _StripePaymentHtmlViewState extends State<StripePaymentHtmlView> {
 
   @override
   Widget build(BuildContext context) {
-    print(elm.viewType);
     return Column(
       children: [
         SizedBox(
