@@ -8,19 +8,12 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: Colors.red,
-        ),
+    return MaterialApp(
+      title: 'Stripe Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
-      child: MaterialApp(
-        title: 'Stripe Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.green,
-        ),
-        home: Home(),
-      ),
+      home: Home(),
     );
   }
 }
