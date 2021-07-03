@@ -4,15 +4,15 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "a81a48356e555c1224be837153b86032",
-"index.html": "9480bec01fc61e04cda6c57e2c4284b1",
-"/": "9480bec01fc61e04cda6c57e2c4284b1",
-"main.dart.js": "e97759bede9f322368f68479bfaf8138",
+"index.html": "cec4dfd9707529571069aa401a42f288",
+"/": "cec4dfd9707529571069aa401a42f288",
+"main.dart.js": "a7bdb2ad4eaa2a7944cd558b734223bb",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "99e17707c0b4bcb4a2cb62b3d0f4515f",
 "assets/AssetManifest.json": "99914b932bd37a50b983c5e7c90ae93b",
-"assets/NOTICES": "6acd54c9c9d1887637a9b6df9ddbcd46",
+"assets/NOTICES": "1331d79fc48365b236a03ecf11e2eff2",
 "assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
 "src/stripe.js": "6cf866fd99077da5970f3cc862867c23"
