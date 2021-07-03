@@ -27,15 +27,21 @@ class _StripePaymentHtmlViewState extends State<StripePaymentHtmlView> {
 
     paymentLabel = "stripe-payment-view";
 
-    BodyElement body = BodyElement();
+    BodyElement body = BodyElement()
+      ..style.height = "100%"
+      ..style.width = "100%";
 
     DivElement card = DivElement()
       ..id = "card-element"
-      ..style.border = "none";
+      ..style.border = "none"
+      ..style.height = "100%"
+      ..style.width = "100%";
 
     DivElement cardErrors = DivElement()
       ..id = "card-errors"
-      ..style.border = "none";
+      ..style.border = "none"
+      ..style.height = "100%"
+      ..style.width = "100%";
 
     body.append(card);
     body.append(cardErrors);
