@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_stripe_test/StripeElement.dart';
 import 'package:flutter_stripe_test/StripeElementPage.dart';
 
 class Home extends StatelessWidget {
