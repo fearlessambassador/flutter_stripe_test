@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_stripe_test/StripeElement.dart';
+import 'package:flutter_stripe_test/StripeElementPage.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -14,8 +15,16 @@ class Home extends StatelessWidget {
           height: 300,
           width: MediaQuery.of(context).size.width * 0.9,
           child: Center(
-            child: StripePaymentHtmlView(
-              key: ValueKey("stripe-payment"),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context, rootNavigator: true)
+                  .pushReplacement(
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => StripeElementPage(),
+                    ),
+                );
+              },
+              child: Text("Go to Stripe Element")
             )
           ),
         ),
