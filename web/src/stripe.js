@@ -31,4 +31,6 @@ function mountCard(cardElement, cardErrors) {
             errorContainer.innerHTML = ""; 
         }
     });
+    
+    return card;
 }
