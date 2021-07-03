@@ -5,10 +5,12 @@ import 'dart:html';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:js/js.dart';
-import 'dart:js' as js;
+
+import 'package:uuid/uuid.dart';
 
 @JS()
-external setUpPaymentIntent(language);
+external stripeInit();
+external mountCard(cardElement, cardErrors);
 
 class StripePaymentHtmlView extends StatefulWidget {
   StripePaymentHtmlView({
@@ -21,13 +23,16 @@ class StripePaymentHtmlView extends StatefulWidget {
 
 class _StripePaymentHtmlViewState extends State<StripePaymentHtmlView> {
   late String paymentLabel;
+  late BodyElement body;
+  late HtmlElementView elm;
+  var stripeCardElement;
 
   @override
   void initState() {
+    const Uuid uuid = Uuid();
+    paymentLabel = "stripe-payment-view-" + uuid.v4();
 
-    paymentLabel = "stripe-payment-view";
-
-    BodyElement body = BodyElement()
+    body = BodyElement()
       ..style.height = "100%"
       ..style.width = "100%";
 
@@ -49,14 +54,25 @@ class _StripePaymentHtmlViewState extends State<StripePaymentHtmlView> {
     ui.platformViewRegistry
         .registerViewFactory(paymentLabel, (int viewId) => body);
 
-    js.context.callMethod("stripeInit", ['en']);
-    js.context.callMethod("mountCard", [card, cardErrors]);
+    elm = HtmlElementView(
+      viewType: paymentLabel,
+    );
+
+    stripeInit();
+    stripeCardElement = mountCard(card, cardErrors);
 
     super.initState();
   }
 
   @override
+  void dispose() {
+    stripeCardElement.unmount();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    print(elm.viewType);
     return Column(
       children: [
         SizedBox(
@@ -65,9 +81,7 @@ class _StripePaymentHtmlViewState extends State<StripePaymentHtmlView> {
         Container(
           height: 100,
           child: Center(
-            child: HtmlElementView(
-              viewType: paymentLabel,
-            ),
+            child: elm,
           ),
         ),
       ],
